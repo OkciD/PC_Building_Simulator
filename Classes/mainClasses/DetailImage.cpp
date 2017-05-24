@@ -25,7 +25,7 @@ DetailImage *DetailImage::create( std::string &resDetailImage ) {
     );
 
 
-    if ( DetailSprite->initWithSpriteFrameName( resDetailImage ) ) {
+//    if ( DetailSprite->initWithSpriteFrameName( resDetailImage ) ) {
 //    DetailSprite->autorelease();
 
     DetailSprite->initOptions();
@@ -33,10 +33,10 @@ DetailImage *DetailImage::create( std::string &resDetailImage ) {
     DetailSprite->addEvents();
 
     return DetailSprite;
-    }
+//    }
 
-    CC_SAFE_DELETE( DetailSprite );
-    return NULL;
+//    CC_SAFE_DELETE( DetailSprite );
+//    return NULL;
 
 }
 
