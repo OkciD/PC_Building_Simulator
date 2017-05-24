@@ -1,13 +1,25 @@
 //
-// Created by sergey on 20.05.17.
+// Created by evgenia on 24.05.17.
 //
 
 #ifndef MYGAME_DETAIL_H
 #define MYGAME_DETAIL_H
 
+class Detail
+{
+public:
+    Detail() {}
 
-class Detail {
+    ~Detail() {}
 
+    int GetRating();
+
+    unsigned int GetPrice();
+
+private:
+    int performanceRating;
+
+    unsigned int price;
 };
 
 

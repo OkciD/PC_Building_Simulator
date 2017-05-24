@@ -69,8 +69,7 @@ bool MainScene::init()
 	this->addChild(header, 2);
 	this->addChild(header->getLabel(), 3);
 
-    std::string testDetailRes("test.png");
-    auto CPUImage = DetailImage::create(testDetailRes);
+    auto CPUImage = DetailImage::create("test.png");
     this->addChild(CPUImage, 1);
 //    CPUImage->update(0.1);
 
