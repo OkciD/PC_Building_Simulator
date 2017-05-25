@@ -3,11 +3,10 @@
 //
 
 #include "DetailImage.h"
-
+#include "MainScene.h"
 
 DetailImage *DetailImage::create(const char *resDetailImage)
 {
-
 
     DetailImage *DetailSprite = new DetailImage();
 
@@ -78,18 +77,23 @@ void DetailImage::addEvents()
         DetailImage::moveEvent(touch, event);
     };
 
+    listener->onTouchEnded = [=](cocos2d::Touch *touch, cocos2d::Event *event)
+    {
+        DetailImage::onTouchEnded(touch, event);
+    };
+
     cocos2d::Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority(listener, 30);
 }
 
 
 void DetailImage::touchCancelledEvent(cocos2d::Touch *touch, cocos2d::Event *_p)
 {
-    CCLOG("touched MySprite");
+//    CCLOG("touched MySprite");
 }
 
 void DetailImage::moveEvent(cocos2d::Touch *touch, cocos2d::Event *_p)
 {
-    CCLOG("move MySprite");
+//    CCLOG("move MySprite");
 
     mPreviousTouchPosition = mTouchMovePosition;
     mTouchMovePosition = touch->getLocation();
@@ -99,4 +103,101 @@ void DetailImage::moveEvent(cocos2d::Touch *touch, cocos2d::Event *_p)
 
     this->setPosition(mNewPosition);
 }
-
+//
+bool DetailImage::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *_p)
+{
+//    detail = "motherboard";
+//
+//    cocos2d::Vec2 p = touch->getLocation();
+//    if (detail == "motherboard")
+//    {
+//        paintMotherboard(p);
+//    }
+//
+//    if (detail == "storageDevice")
+//    {
+//        paintStorageDevice(p);
+//    }
+//
+//    if (detail == "powerSupply")
+//    {
+//        paintPowerSupply(p);
+//    }
+//
+//
+}
+//
+//void DetailImage::paintMotherboard(cocos2d::Vec2 p)
+//{
+//    DetailMargin Margin(550, 850, 450, 530);
+//    auto visibleSize = Director::getInstance()->getVisibleSize();
+//
+//    double sizeOfDecorator = 300; // размер миниатюры
+//
+//    if (p.x >= Margin.x && p.x <= Margin.x + Margin.lenghtX && p.y <= Margin.y && p.y >= Margin.y - Margin.lenghtY)
+//    {
+//        const Size size = visibleSize / 12; // как считать этот коэффициент?
+//
+//        auto motherboard = Sprite::create("motherboard.jpg");
+//        motherboard->setContentSize(size);
+//        motherboard->setPosition(Margin.x - p.x, Margin.y - p.y);
+//
+//        this->addChild(motherboard, 1);
+//
+//        //   Carcass->addChild(processor, 1);
+//    } else
+//    {
+//        //вычитаем сумму, ничего не делаем
+//    }
+//
+//    //удалить изображение миниатюры
+//
+//}
+//
+//void DetailImage::paintStorageDevice(cocos2d::Vec2 p)
+//{
+//    DetailMargin Margin(1111, 623, 200, 70);
+//    auto visibleSize = Director::getInstance()->getVisibleSize();
+//
+//    double sizeOfDecorator = 300; // размер миниатюры
+//
+//    if (p.x >= Margin.x && p.x <= Margin.x + Margin.lenghtX && p.y <= Margin.y && p.y >= Margin.y - Margin.lenghtY)
+//    {
+//        const Size size = visibleSize / 12; // как считать этот коэффициент?
+//
+//        auto storageDevice = Sprite::create("storage.jpg");
+//        storageDevice->setContentSize(size);
+//        storageDevice->setPosition(Margin.x - p.x, Margin.y - p.y);
+//
+//        this->addChild(storageDevice, 1);
+//
+//        //   Carcass->addChild(processor, 1);
+//    } else
+//    {
+//        //вычитаем сумму, ничего не делаем
+//    }
+//}
+//
+//void DetailImage::paintPowerSupply(cocos2d::Vec2 p)
+//{
+//    DetailMargin Margin(500, 300, 450, 200);
+//    auto visibleSize = Director::getInstance()->getVisibleSize();
+//
+//    double sizeOfDecorator = 300; // размер миниатюры
+//
+//    if (p.x >= Margin.x && p.x <= Margin.x + Margin.lenghtX && p.y <= Margin.y && p.y >= Margin.y - Margin.lenghtY)
+//    {
+//        const Size size = visibleSize / 12; // как считать этот коэффициент?
+//
+//        auto power = Sprite::create("block.jpg");
+//        power->setContentSize(size);
+//        power->setPosition(Margin.x - p.x, Margin.y - p.y);
+//
+//        this->addChild(power, 1);
+//
+//        //   Carcass->addChild(processor, 1);
+//    } else
+//    {
+//        //вычитаем сумму, ничего не делаем
+//    }
+//}
