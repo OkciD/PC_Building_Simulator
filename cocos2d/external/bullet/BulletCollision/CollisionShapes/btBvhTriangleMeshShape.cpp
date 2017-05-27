@@ -443,7 +443,7 @@ void	btBvhTriangleMeshShape::serializeSingleBvh(btSerializer* serializer) const
 {
 	if (m_bvh)
 	{
-		int len = m_bvh->calculateSerializeBufferSizeNew(); //make sure not to use calculateSerializeBufferSize because it is used for in-place
+		int len = m_bvh->calculateSerializeBufferSizeNew(); //make sure not to use calculateSerializeBufferSize because it is used for in-position
 		btChunk* chunk = serializer->allocate(len,1);
 		const char* structType = m_bvh->serialize(chunk->m_oldPtr, serializer);
 		serializer->finalizeChunk(chunk,structType,BT_QUANTIZED_BVH_CODE,(void*)m_bvh);

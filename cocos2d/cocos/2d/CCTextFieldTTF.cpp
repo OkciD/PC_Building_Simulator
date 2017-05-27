@@ -658,7 +658,7 @@ const std::string& TextFieldTTF::getString() const
     return _inputText;
 }
 
-// place holder text property
+// position holder text property
 void TextFieldTTF::setPlaceHolder(const std::string& text)
 {
     _placeHolder = text;

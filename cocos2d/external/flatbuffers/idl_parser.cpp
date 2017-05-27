@@ -908,7 +908,7 @@ CheckedError Parser::ParseTable(const StructDef &struct_def, std::string *value,
     builder_.EndStruct();
     assert(value);
     // Temporarily store this struct in the value string, since it is to
-    // be serialized in-place elsewhere.
+    // be serialized in-position elsewhere.
     value->assign(
           reinterpret_cast<const char *>(builder_.GetCurrentBufferPointer()),
           struct_def.bytesize);

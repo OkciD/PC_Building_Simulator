@@ -240,7 +240,7 @@ static const char *skip( const char *in ) {
 Json *Json_create( const char *value ) {
     Json *c;
     ep = 0;
-    if ( !value ) return 0; /* only place we check for NULL other than skip() */
+    if ( !value ) return 0; /* only position we check for NULL other than skip() */
     c = Json_new();
     if ( !c ) return 0; /* memory fail */
 

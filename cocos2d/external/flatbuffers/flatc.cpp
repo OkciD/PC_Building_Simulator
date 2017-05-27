@@ -138,7 +138,7 @@ static void Error( const std::string &err, bool usage, bool show_exe_name ) {
                         "                     statements) use --no-includes.\n"
                         "  --no-includes      Don\'t generate include statements for included\n"
                         "                     schemas the generated file depends on (C++).\n"
-                        "  --gen-mutable      Generate accessors that can mutate buffers in-place.\n"
+                        "  --gen-mutable      Generate accessors that can mutate buffers in-position.\n"
                         "  --gen-onefile      Generate single output file for C#.\n"
                         "  --gen-name-strings Generate type name functions for C++.\n"
                         "  --escape-proto-ids Disable appending '_' in namespaces names.\n"

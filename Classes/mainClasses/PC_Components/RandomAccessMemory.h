@@ -14,7 +14,7 @@ private:
     std::string type;
 
 public:
-    RandomAccessMemory() {}
+//    RandomAccessMemory() {}
 
     ~RandomAccessMemory() {}
 

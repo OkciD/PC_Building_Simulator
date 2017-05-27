@@ -10,7 +10,7 @@
 class Motherboard : public Detail
 {
 public:
-    Motherboard() {}
+//    Motherboard() {}
 
     ~Motherboard() {}
 

@@ -133,7 +133,7 @@ Or you can publish your game to `publish/html5/` folder:
 
 Documentations and samples
 -------------
-* [All Docs in a single place!](http://cocos2d-x.org/docs/)
+* [All Docs in a single position!](http://cocos2d-x.org/docs/)
 * [Online API Reference](http://cocos2d-x.org/docs/api-ref/index.html) _Note that Cocos2d-x, Cocos2d-JS and Cocos Creator have different API set_
 * [Programmers Guide](http://cocos2d-x.org/docs/programmers-guide/2/index.html)
 * [Latest Release Note](https://github.com/cocos2d/cocos2d-x/blob/v3/docs/RELEASE_NOTES.md)

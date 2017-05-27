@@ -1304,8 +1304,8 @@ cocos2d-x-3.3-rc1  Nov.29 2014
     [FIX]           Sprite3D: did not create attached sprite from cache
     [FIX]           Tests: Sprite Performance Test automation works as expected
     [FIX]           UI: Text: invoke ignoreContentAdatpSize(false) will cause wrong effect
-    [FIX]           VideoPlayer: showed in wrong place on Android v2.3.x
-    [FIX]           WebView: showed in wrong place on Android v2.3.x
+    [FIX]           VideoPlayer: showed in wrong position on Android v2.3.x
+    [FIX]           WebView: showed in wrong position on Android v2.3.x
     [FIX]           WP: back key behaviour and Director::getInstance()->end() works not correctly
 
     [FIX]           Lua-binding: XmlHttpRequest would truncate binary data

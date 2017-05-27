@@ -4,13 +4,16 @@
 
 #ifndef MYGAME_VIDEOCARD_H
 #define MYGAME_VIDEOCARD_H
+
 #include "../Detail.h"
 
-class Videocard: public Detail  {
+class Videocard : public Detail
+{
 public:
-    Videocard() {}
+//    Videocard() {}
 
     ~Videocard() {}
+
 private:
 //
 };

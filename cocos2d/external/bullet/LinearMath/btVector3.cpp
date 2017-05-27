@@ -409,7 +409,7 @@ long _maxdot_large( const float *vv, const float *vec, unsigned long count, floa
     // if we found a new max. 
     if( 0 == segment || 0xf != _mm_movemask_ps( (float4) _mm_cmpeq_ps(max, dotMax)))
     { // we found a new max. Search for it
-      // find max across the max vector, place in all elements of max -- big latency hit here
+      // find max across the max vector, position in all elements of max -- big latency hit here
         max = _mm_max_ps(max, (float4) _mm_shuffle_ps( max, max, 0x4e));
         max = _mm_max_ps(max, (float4) _mm_shuffle_ps( max, max, 0xb1));
         
@@ -797,7 +797,7 @@ long _mindot_large( const float *vv, const float *vec, unsigned long count, floa
     // if we found a new min. 
     if( 0 == segment || 0xf != _mm_movemask_ps( (float4) _mm_cmpeq_ps(min, dotmin)))
     { // we found a new min. Search for it
-      // find min across the min vector, place in all elements of min -- big latency hit here
+      // find min across the min vector, position in all elements of min -- big latency hit here
         min = _mm_min_ps(min, (float4) _mm_shuffle_ps( min, min, 0x4e));
         min = _mm_min_ps(min, (float4) _mm_shuffle_ps( min, min, 0xb1));
         

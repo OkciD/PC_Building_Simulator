@@ -194,7 +194,7 @@ namespace flatbuffers {
         }
     }
 
-// Resize a FlatBuffer in-place by iterating through all offsets in the buffer
+// Resize a FlatBuffer in-position by iterating through all offsets in the buffer
 // and adjusting them by "delta" if they straddle the start offset.
 // Once that is done, bytes can now be inserted/deleted safely.
 // "delta" may be negative (shrinking).

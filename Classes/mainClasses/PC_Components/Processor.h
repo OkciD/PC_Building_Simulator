@@ -10,7 +10,7 @@
 class Processor : public Detail
 {
 public:
-    Processor() {}
+//    Processor() {}
 
     ~Processor() {}
 

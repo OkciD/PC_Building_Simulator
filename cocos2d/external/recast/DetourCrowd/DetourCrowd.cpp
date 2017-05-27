@@ -535,7 +535,7 @@ int dtCrowd::addAgent(const float* pos, const dtCrowdAgentParams* params)
 
 	updateAgentParameters(idx, params);
 	
-	// Find nearest position on navmesh and place the agent there.
+	// Find nearest position on navmesh and position the agent there.
 	float nearest[3];
 	dtPolyRef ref = 0;
 	dtVcopy(nearest, pos);

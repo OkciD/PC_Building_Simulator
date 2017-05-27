@@ -1,10 +1,10 @@
 #include <cocos/ui/UIHelper.h>
+#include <mainClasses/ComponentWithConnectionAreas.h>
 #include "MainScene.h"
 #include "SimpleAudioEngine.h"
 #include "ui/CocosGUI.h"
 #include "ListWidget.h"
-#include "mainClasses/DetailImage.h"
-#include "mainClasses/CarcasImage.h"
+#include "mainClasses/MiniComponentImage.h"
 
 USING_NS_CC;
 
@@ -40,7 +40,6 @@ bool MainScene::init()
     this->addChild(background, -10);
 
 
-
     auto title = Label::createWithTTF("PC Building Simulator",
                                       "fonts/Orbitron.ttf", 24);
     title->setPosition(Vec2(origin.x + visibleSize.width / 2,
@@ -74,15 +73,24 @@ bool MainScene::init()
     this->addChild(header->getLabel(), 3);
 
 
-
-
-    auto carcass = CarcasImage::create("carcass.jpg");
+    auto carcass = ComponentWithConnectionAreas::create(CARCAS, "carcass.jpg", Vec2(300.0, 1000.0),
+                                                        Vec2(1200.0, 100.0));
+    carcass->setName("Carcas");
     this->addChild(carcass, -1);
 
 
-    auto CPUImage = DetailImage::create("test.png");
-    carcass->addChild(CPUImage, 1);
 
+
+
+//    Detail motherboardDetail(MOTHERBOARD, "motherboard.jpg");
+//    auto motherboard = ComponentWithConnectionAreas::create(motherboardDetail);
+//    carcass->AddComponent(motherboard);
+
+
+
+//
+    auto CPUImage = MiniComponentImage::create(MOTHERBOARD, "test.png", Vec2(1500, 800));
+    this->addChild(CPUImage, 1);
 
     return true;
 }
@@ -107,6 +115,6 @@ void MainScene::menuCloseCallback(Ref *pSender)
 
 void MainScene::update(float dt)
 {
-//    DetailImage::update( dt );
+//    MiniComponentImage::update( dt );
 //    CPUImage->update(0.1);
 }

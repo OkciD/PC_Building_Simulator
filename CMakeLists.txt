@@ -135,7 +135,7 @@ set(GAME_HEADERS
         Classes/AppDelegate.h
         Classes/MainScene.h
         ${PLATFORM_SPECIFIC_HEADERS}
-        Classes/ListWidget.cpp Classes/ListWidget.h Classes/ListHeaderItem.cpp Classes/ListHeaderItem.h Classes/CustomSprite.cpp Classes/CustomSprite.h Classes/mainClasses/DetailImage.cpp Classes/mainClasses/DetailImage.h Classes/mainClasses/Detail.cpp Classes/mainClasses/Detail.h Classes/mainClasses/Computer.cpp Classes/mainClasses/Computer.h Classes/mainClasses/CarcasImage.cpp Classes/mainClasses/CarcasImage.h)
+        Classes/ListWidget.cpp Classes/ListWidget.h Classes/ListHeaderItem.cpp Classes/ListHeaderItem.h Classes/CustomSprite.cpp Classes/CustomSprite.h Classes/mainClasses/MiniComponentImage.cpp Classes/mainClasses/MiniComponentImage.h Classes/mainClasses/Detail.cpp Classes/mainClasses/Detail.h Classes/mainClasses/Computer.cpp Classes/mainClasses/Computer.h Classes/mainClasses/ComponentImage.cpp Classes/mainClasses/ComponentImage.h Classes/mainClasses/ComponentWithConnectionAreas.cpp Classes/mainClasses/ComponentWithConnectionAreas.h Classes/Constants.h Classes/mainClasses/Validator.cpp Classes/mainClasses/Validator.h)
 
 
 # Configure libcocos2d

@@ -10,7 +10,7 @@
 class StorageDevice : public Detail
 {
 public:
-    StorageDevice() {}
+//    StorageDevice {}
 
     ~StorageDevice() {}
 

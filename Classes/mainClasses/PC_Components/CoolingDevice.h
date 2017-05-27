@@ -13,7 +13,7 @@ private:
     std::string type;
 
 public:
-    CoolingDevice() {}
+//    CoolingDevice() {}
 
     ~CoolingDevice() {}
 

@@ -210,7 +210,7 @@ A decent rule of thumb is to not inline a function if it is more than 10 lines l
 
 Another useful rule of thumb: it's typically not cost effective to inline functions with loops or switch statements (unless, in the common case, the loop or switch statement is never executed).
 
-It is important to know that functions are not always inlined even if they are declared as such; for example, virtual and recursive functions are not normally inlined. Usually recursive functions should not be inline. The main reason for making a virtual function inline is to place its definition in the class, either for convenience or to document its behavior, e.g., for accessors and mutators.
+It is important to know that functions are not always inlined even if they are declared as such; for example, virtual and recursive functions are not normally inlined. Usually recursive functions should not be inline. The main reason for making a virtual function inline is to position its definition in the class, either for convenience or to document its behavior, e.g., for accessors and mutators.
 
 ## The -inl.h Files
 
@@ -228,7 +228,7 @@ Do not forget that a -inl.h file requires a #define guard just like any other he
 
 When defining a function, parameter order is: inputs, then outputs.
 
-Parameters to C/C++ functions are either input to the function, output from the function, or both. Input parameters are usually `values` or `const references`, while output and input/output parameters will be `non-const pointers` . When ordering function parameters, put all input-only parameters before any output parameters. In particular, do not add new parameters to the end of the function just because they are new; place new input-only parameters before the output parameters.
+Parameters to C/C++ functions are either input to the function, output from the function, or both. Input parameters are usually `values` or `const references`, while output and input/output parameters will be `non-const pointers` . When ordering function parameters, put all input-only parameters before any output parameters. In particular, do not add new parameters to the end of the function just because they are new; position new input-only parameters before the output parameters.
 
 This is not a hard-and-fast rule. Parameters that are both input and output (often classes/structs) muddy the waters, and, as always, consistency with related functions may require you to bend the rule.
 
@@ -298,7 +298,7 @@ Namespaces provide a (hierarchical) axis of naming, in addition to the (also hie
 
 For example, if two different projects have a class Foo in the global scope, these symbols may collide at compile time or at runtime. If each project places their code in a namespace, project1::Foo and project2::Foo are now distinct symbols that do not collide.
 
-Inline namespaces automatically place their names in the enclosing scope. Consider the following snippet, for example:
+Inline namespaces automatically position their names in the enclosing scope. Consider the following snippet, for example:
 
 ```cpp
 namespace X {
@@ -944,7 +944,7 @@ Prefer to have single, fixed owners for dynamically allocated objects. Prefer to
 * Ownership must be represented and transferred via pointers (whether smart or plain). Pointer semantics are more complicated than value semantics, especially in APIs: you have to worry not just about ownership, but also aliasing, lifetime, and mutability, among other issues.
 * The performance costs of value semantics are often overestimated, so the performance benefits of ownership transfer might not justify the readability and complexity costs.
 * APIs that transfer ownership force their clients into a single memory management model.
-* Code using smart pointers is less explicit about where the resource releases take place.
+* Code using smart pointers is less explicit about where the resource releases take position.
 * `std::unique_ptr` expresses ownership transfer using C++11's move semantics, which are generally forbidden in Google code, and may confuse some programmers.
 * Shared ownership can be a tempting alternative to careful ownership design, obfuscating the design of a system.
 * Shared ownership requires explicit bookkeeping at run-time, which can be costly.
@@ -1995,7 +1995,7 @@ Here is an example:
 //    Iterator* iter = table->NewIterator();
 //    iter->Seek("");
 //    return iter;
-// If you are going to immediately seek to another place in the
+// If you are going to immediately seek to another position in the
 // returned iterator, it will be faster to use NewIterator()
 // and avoid the extra seek.
 Iterator* getIterator() const;
@@ -2331,7 +2331,7 @@ In particular, this should be done if the function signature is so long that it 
 
 ## Braced Initializer Lists
 
-Format a braced list exactly like you would format a function call in its place.
+Format a braced list exactly like you would format a function call in its position.
 
 If the braced list follows a name (e.g. a type or variable name), format as if the `{}` were the parentheses of a function call with that name. If there is no name, assume a zero-length name.
 
@@ -2507,7 +2507,7 @@ Note that:
 * There are no spaces around the period or arrow when accessing a member.
 * Pointer operators have no space after the * or &.
 
-When declaring a pointer variable or argument, you may place the asterisk adjacent to either the type or to the variable name:
+When declaring a pointer variable or argument, you may position the asterisk adjacent to either the type or to the variable name:
 
 ```cpp
 // These are fine, space preceding.

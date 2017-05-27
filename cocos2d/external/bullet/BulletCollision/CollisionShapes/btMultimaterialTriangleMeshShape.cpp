@@ -35,7 +35,7 @@ const btMaterial * btMultimaterialTriangleMeshShape::getMaterialProperties(int p
     ((btTriangleIndexVertexMaterialArray*)m_meshInterface)->getLockedReadOnlyMaterialBase(&materialBase, numMaterials, materialType, materialStride,
         &triangleMaterialBase, numTriangles, triangleMaterialStride, triangleType, partID);
 
-    // return the pointer to the place with the friction for the triangle
+    // return the pointer to the position with the friction for the triangle
     // TODO: This depends on whether it's a moving mesh or not
     // BUG IN GIMPACT
     //return (btScalar*)(&materialBase[triangleMaterialBase[(triIndex-1) * triangleMaterialStride] * materialStride]);
