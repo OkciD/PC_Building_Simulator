@@ -1,5 +1,5 @@
 #include "AppDelegate.h"
-#include "MainScene.h"
+#include "interface/MainScene.h"
 
 // #define USE_AUDIO_ENGINE 1
 // #define USE_SIMPLE_AUDIO_ENGINE 1
@@ -18,6 +18,7 @@ using namespace CocosDenshion;
 
 USING_NS_CC;
 
+//static cocos2d::Size designResolutionSize = cocos2d::Size(800, 600);
 //static cocos2d::Size designResolutionSize = cocos2d::Size(1024, 768);
 static cocos2d::Size designResolutionSize = cocos2d::Size(1920, 1080);
 static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);

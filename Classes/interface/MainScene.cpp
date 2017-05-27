@@ -2,11 +2,11 @@
 #include "MainScene.h"
 #include "SimpleAudioEngine.h"
 #include "ui/CocosGUI.h"
-#include "ListWidget.h"
+#include "interface/ListWidget/ListWidget.h"
 
 USING_NS_CC;
 
-const int border = 2;
+const int border = 5;
 void setNodeSize(Node * const node, double const &width,
                  double const &height)
 {
@@ -41,7 +41,7 @@ bool MainScene::init()
 	                        origin.y + visibleSize.height -
 	                        title->getContentSize().height));
 	title->setColor(Color3B(0, 0, 0));
-	this->addChild(title, 1);
+	this->addChild(title);
 
     auto closeItem = MenuItemImage::create("close_icon.png",
                                            "close_icon.png",
@@ -55,17 +55,13 @@ bool MainScene::init()
 
     auto menu = Menu::create(closeItem, NULL);
     menu->setPosition(Vec2::ZERO);
-    this->addChild(menu, 1);
+    this->addChild(menu);
 
 	auto listWidget = ListWidget::create();
-	this->addChild(listWidget, 1);
-
-	auto header = ListHeaderItem::create("Motherboards", 40, Vec2(0, 0),
-	                                     Vec2(200, 200),
-	                                     Size(static_cast<float>(0.2 *
-			                                     visibleSize.width), 70));
-	this->addChild(header, 2);
-	this->addChild(header->getLabel(), 3);
+	listWidget->setAnchorPoint(Vec2(1, 1));
+	listWidget->setPosition(origin.x + visibleSize.width - border,
+	                        origin.y + visibleSize.height - border);
+	this->addChild(listWidget);
 
     return true;
 }

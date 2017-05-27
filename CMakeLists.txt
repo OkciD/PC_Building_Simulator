@@ -127,15 +127,15 @@ endif( WIN32 )
 
 set(GAME_SRC
   Classes/AppDelegate.cpp
-        Classes/MainScene.cpp
+        Classes/interface/MainScene.cpp
   ${PLATFORM_SPECIFIC_SRC}
 )
 
 set(GAME_HEADERS
   Classes/AppDelegate.h
-        Classes/MainScene.h
+        Classes/interface/MainScene.h
   ${PLATFORM_SPECIFIC_HEADERS}
-        Classes/ListWidget.cpp Classes/ListWidget.h Classes/ListHeaderItem.cpp Classes/ListHeaderItem.h Classes/CustomSprite.cpp Classes/CustomSprite.h)
+        Classes/interface/ListWidget/ListWidget.cpp Classes/interface/ListWidget/ListWidget.h Classes/interface/ListWidget/ListHeaderItem.cpp Classes/interface/ListWidget/ListHeaderItem.h Classes/interface/ListWidget/ComponentsWidget.cpp Classes/interface/ListWidget/ComponentsWidget.h)
 
 
 # Configure libcocos2d
